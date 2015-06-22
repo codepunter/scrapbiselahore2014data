@@ -98,7 +98,7 @@ def read_url(url, queue):
 		#print com
 
 		studentRecords={"RollNo":ft[0],"Reg_No":ft[2],"Result_Status":ft[3],"Name":candName,"Fname":fatherName,"collegeName":collegeName,"subject":com}
-		save_collection("studentRecords1",studentRecords)
+		save_collection("studentRecords2",studentRecords)
 
 		print studentRecords
 		queue.put(data)
@@ -125,9 +125,9 @@ def fetch_parallel(urls):
 
 
 db=find_all_in_collection("clgdetails")
-#print len(db[0]["clgdata"])
+print len(db[0]["clgdata"])
 
-for x in range(3,len(db[0]['clgdata'])):
+for x in range(350,410):
 	header, status = subprocess.Popen(['curl', '--data','institute_code='+str(int(db[0]['clgdata'][x]['cid']))+'', 'http://biselahore.com/Zaidi_12th.php'], stdout=subprocess.PIPE).communicate()
 	#print header
 	
@@ -139,3 +139,51 @@ for x in range(3,len(db[0]['clgdata'])):
 		rollNo.append(td[1].text.strip())
 	fetch_parallel(rollNo)
 
+
+
+
+#delete roll no  
+
+#512142
+
+
+
+# left out in first college 
+
+# 1079	615138	NABEEL AHMAD	ALI MUHAMMAD	697	PASS 697 B
+# 1080	615139	NABEEL QASIM	MUHAMMAD QASIM	614	PASS 614 C
+# 1081	615140	WASEEM AKRAM	MUHAMMAD KHAN	780	PASS 780 A
+# 1082	615141	WASEEM IRSHAD	MUHAMMAD IRSHAD	0	E. I, II - EDU. I, II - SUP.2015
+# 1083	615149	SAJID NASEER	RANA NASEER AHMAD	0	E. II - SOCI. II - SUP.2015
+# 1084	615151	AWAIS KHALID	KHALID JAVED	0	FAIL
+# 1085	615153	HAFIZ JAMSHAID	MUHAMMAD DIN	851	PASS 851 A
+# 1086	615156	SHAKEEL	SHARIF	0	E. I, II - CSC. I, II - SUP.2015
+# 1087	615158	HAFIZ AMANAT ALI	MALIK AKBAR ALI	0	E. II - SUP.2015
+# 1088	615159	HAROON AHMAD GHANI	ABDUL GHANI SAQIB	519	PASS 519 D
+# 1089	615160	FAROOQ AHMAD	AKHTAR KHAN	0	FAIL
+# 1090	615162	ABTSAM USMAN	MUHAMMAD USMAN	0	E. I, II - ISL.ST. II - SUP.2015
+# 1091	615163	ISHTIAQ AHMAD	MUHAMMAD ASLAM	508	PASS 508 D
+# 1092	615167	MANZOOR HUSSAIN	MUHAMMAD RAFIQ	0	E. II - SUP.2015
+
+
+
+# first loop till 
+#   "cid":3347,
+#     "cname":"LEICESTER COLLEGE OF TECHNOLOGY AND COMMERCE BOYS
+
+
+
+
+# stop 
+
+
+# {'Name': u'SAMEERA BIBI', 'RollNo': u'611563', 'Result_Status': u'PASS', 'Reg_No': u'2-12-506812', 'collegeName': u'GOVT. COLLEGE FOR WOMEN, PHOOL NAG
+
+
+
+# 0 is in studentRecords
+# 1-29 in studentRecords1
+
+# 30 left 
+
+# 31 to rest studentRecords2 
