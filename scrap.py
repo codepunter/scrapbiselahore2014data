@@ -36,9 +36,6 @@ def find_all_in_collection(collection):
 
 
 
-# #print rollNo
-# #print "@@@@@@@@@@@@@@"
-# #print rollNo[0] 
 
 
 def read_url(url, queue):
@@ -107,7 +104,7 @@ def read_url(url, queue):
 
 
 
-# D:\MSDEV\PACS\dev_working_stable\main\Projects\RadSpeed\Build_Script\RIS-PACS
+
 def fetch_parallel(urls):
 	result = Queue.Queue()
 	threads = [threading.Thread(target=read_url, args = (url,result)) for url in urls]
@@ -142,48 +139,3 @@ for x in range(350,410):
 
 
 
-#delete roll no  
-
-#512142
-
-
-
-# left out in first college 
-
-# 1079	615138	NABEEL AHMAD	ALI MUHAMMAD	697	PASS 697 B
-# 1080	615139	NABEEL QASIM	MUHAMMAD QASIM	614	PASS 614 C
-# 1081	615140	WASEEM AKRAM	MUHAMMAD KHAN	780	PASS 780 A
-# 1082	615141	WASEEM IRSHAD	MUHAMMAD IRSHAD	0	E. I, II - EDU. I, II - SUP.2015
-# 1083	615149	SAJID NASEER	RANA NASEER AHMAD	0	E. II - SOCI. II - SUP.2015
-# 1084	615151	AWAIS KHALID	KHALID JAVED	0	FAIL
-# 1085	615153	HAFIZ JAMSHAID	MUHAMMAD DIN	851	PASS 851 A
-# 1086	615156	SHAKEEL	SHARIF	0	E. I, II - CSC. I, II - SUP.2015
-# 1087	615158	HAFIZ AMANAT ALI	MALIK AKBAR ALI	0	E. II - SUP.2015
-# 1088	615159	HAROON AHMAD GHANI	ABDUL GHANI SAQIB	519	PASS 519 D
-# 1089	615160	FAROOQ AHMAD	AKHTAR KHAN	0	FAIL
-# 1090	615162	ABTSAM USMAN	MUHAMMAD USMAN	0	E. I, II - ISL.ST. II - SUP.2015
-# 1091	615163	ISHTIAQ AHMAD	MUHAMMAD ASLAM	508	PASS 508 D
-# 1092	615167	MANZOOR HUSSAIN	MUHAMMAD RAFIQ	0	E. II - SUP.2015
-
-
-
-# first loop till 
-#   "cid":3347,
-#     "cname":"LEICESTER COLLEGE OF TECHNOLOGY AND COMMERCE BOYS
-
-
-
-
-# stop 
-
-
-# {'Name': u'SAMEERA BIBI', 'RollNo': u'611563', 'Result_Status': u'PASS', 'Reg_No': u'2-12-506812', 'collegeName': u'GOVT. COLLEGE FOR WOMEN, PHOOL NAG
-
-
-
-# 0 is in studentRecords
-# 1-29 in studentRecords1
-
-# 30 left 
-
-# 31 to rest studentRecords2 
